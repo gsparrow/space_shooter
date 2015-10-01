@@ -20,27 +20,48 @@ class space_invader (object):
     self.my_velocity_x = velocity_x
     self.my_velocity_y = velocity_y
     self.size = size_multiplier
+    self.change = 0
 
   def draw(self):
-    pygame.draw.rect(screen, WHITE, [self.my_x +  4*self.size,  self.my_y,                 2*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x + 16*self.size,  self.my_y,                 2*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x +  6*self.size,  self.my_y +  2*self.size,  2*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x + 14*self.size,  self.my_y +  2*self.size,  2*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x +  4*self.size,  self.my_y +  4*self.size, 14*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x +  2*self.size,  self.my_y +  6*self.size,  4*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x +  8*self.size,  self.my_y +  6*self.size,  6*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x + 16*self.size,  self.my_y +  6*self.size,  4*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x +  0*self.size,  self.my_y +  8*self.size, 22*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x +  0*self.size,  self.my_y + 10*self.size,  2*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x +  4*self.size,  self.my_y + 10*self.size, 14*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x + 20*self.size,  self.my_y + 10*self.size,  2*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x +  0*self.size,  self.my_y + 12*self.size,  2*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x +  4*self.size,  self.my_y + 12*self.size,  2*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x + 16*self.size,  self.my_y + 12*self.size,  2*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x + 20*self.size,  self.my_y + 12*self.size,  2*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x +  6*self.size,  self.my_y + 14*self.size,  4*self.size, 2*self.size])
-    pygame.draw.rect(screen, WHITE, [self.my_x + 12*self.size,  self.my_y + 14*self.size,  4*self.size, 2*self.size])
-    
+    self.change = self.change +1
+    if self.change%2 == 0:
+      pygame.draw.rect(screen, WHITE, [self.my_x +  4*self.size,  self.my_y,                 2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x + 16*self.size,  self.my_y,                 2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  6*self.size,  self.my_y +  2*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x + 14*self.size,  self.my_y +  2*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  4*self.size,  self.my_y +  4*self.size, 14*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  2*self.size,  self.my_y +  6*self.size,  4*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  8*self.size,  self.my_y +  6*self.size,  6*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x + 16*self.size,  self.my_y +  6*self.size,  4*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  0*self.size,  self.my_y +  8*self.size, 22*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  0*self.size,  self.my_y + 10*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  4*self.size,  self.my_y + 10*self.size, 14*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x + 20*self.size,  self.my_y + 10*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  0*self.size,  self.my_y + 12*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  4*self.size,  self.my_y + 12*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x + 16*self.size,  self.my_y + 12*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x + 20*self.size,  self.my_y + 12*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  6*self.size,  self.my_y + 14*self.size,  4*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x + 12*self.size,  self.my_y + 14*self.size,  4*self.size, 2*self.size])
+    else:
+      pygame.draw.rect(screen, WHITE, [self.my_x +  4*self.size,  self.my_y,                 2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x + 16*self.size,  self.my_y,                 2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  0*self.size,  self.my_y +  2*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  6*self.size,  self.my_y +  2*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x + 14*self.size,  self.my_y +  2*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x + 20*self.size,  self.my_y +  2*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  0*self.size,  self.my_y +  4*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  4*self.size,  self.my_y +  4*self.size, 14*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x + 20*self.size,  self.my_y +  4*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  0*self.size,  self.my_y +  6*self.size,  6*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  8*self.size,  self.my_y +  6*self.size,  6*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x + 16*self.size,  self.my_y +  6*self.size,  6*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  0*self.size,  self.my_y +  8*self.size, 22*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  2*self.size,  self.my_y + 10*self.size, 18*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  4*self.size,  self.my_y + 12*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x + 16*self.size,  self.my_y + 12*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x +  2*self.size,  self.my_y + 14*self.size,  2*self.size, 2*self.size])
+      pygame.draw.rect(screen, WHITE, [self.my_x + 18*self.size,  self.my_y + 14*self.size,  2*self.size, 2*self.size])
     
     
 
@@ -56,7 +77,7 @@ baddie = space_invader(10,10,0,0,4)
 while not done:
 
   #limit the clock to ten loops per second
-  clock.tick(10)
+  clock.tick(1)
 
   for event in pygame.event.get():
     if event.type == pygame.QUIT:
