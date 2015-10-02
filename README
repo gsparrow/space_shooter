@@ -1,0 +1,5 @@
+A simple space shooter in python.
+
+To run: python main.py
+
+Requires the pygame library.

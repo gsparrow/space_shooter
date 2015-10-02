@@ -214,3 +214,66 @@ class space_invader_jellyfish (my_sprite):
       self.my_velocity_y = -1 * self.my_velocity_y
     self.my_y += self.my_velocity_y
 
+class ship (my_sprite): 
+  def __init__(self, x, y, velocity_x, velocity_y, size_multiplier, color, color2, color3, screen):
+    my_sprite.__init__(self, x, y, velocity_x, velocity_y, size_multiplier)
+    self.primary_color   = color
+    self.secondary_color = color2
+    self.tertiary_color  = color3
+    self.screen          = screen
+
+  def get_primary_color (self):
+    return self.primary_color
+
+  def set_primary_color (self, color):
+    self.primary_color = color
+
+  def draw(self):
+      pygame.draw.rect(self.screen, self.secondary_color, [self.my_x +  0*self.size,  self.my_y + 14*self.size,  2*self.size,  4*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x +  0*self.size,  self.my_y + 18*self.size,  2*self.size, 14*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x +  2*self.size,  self.my_y + 24*self.size,  2*self.size,  6*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x +  4*self.size,  self.my_y + 22*self.size,  2*self.size,  6*self.size])
+      pygame.draw.rect(self.screen, self.secondary_color, [self.my_x +  6*self.size,  self.my_y + 10*self.size,  2*self.size,  4*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x +  6*self.size,  self.my_y + 14*self.size,  2*self.size,  4*self.size])
+      pygame.draw.rect(self.screen, self.tertiary_color,  [self.my_x +  6*self.size,  self.my_y + 18*self.size,  2*self.size,  2*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x +  6*self.size,  self.my_y + 20*self.size,  2*self.size,  6*self.size])
+      pygame.draw.rect(self.screen, self.tertiary_color,  [self.my_x +  8*self.size,  self.my_y + 16*self.size,  2*self.size,  2*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x +  8*self.size,  self.my_y + 18*self.size,  2*self.size,  8*self.size])
+      pygame.draw.rect(self.screen, self.secondary_color, [self.my_x +  8*self.size,  self.my_y + 26*self.size,  2*self.size,  4*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x + 10*self.size,  self.my_y + 14*self.size,  2*self.size, 10*self.size])
+      pygame.draw.rect(self.screen, self.secondary_color, [self.my_x + 10*self.size,  self.my_y + 24*self.size,  2*self.size,  6*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x + 12*self.size,  self.my_y +  6*self.size,  2*self.size, 12*self.size])
+      pygame.draw.rect(self.screen, self.secondary_color, [self.my_x + 12*self.size,  self.my_y + 18*self.size,  2*self.size,  4*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x + 12*self.size,  self.my_y + 22*self.size,  2*self.size,  6*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x + 14*self.size,  self.my_y +  0*self.size,  2*self.size, 16*self.size])
+      pygame.draw.rect(self.screen, self.secondary_color, [self.my_x + 14*self.size,  self.my_y + 16*self.size,  2*self.size,  4*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x + 14*self.size,  self.my_y + 20*self.size,  2*self.size, 12*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x + 16*self.size,  self.my_y +  6*self.size,  2*self.size, 12*self.size])
+      pygame.draw.rect(self.screen, self.secondary_color, [self.my_x + 16*self.size,  self.my_y + 18*self.size,  2*self.size,  4*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x + 16*self.size,  self.my_y + 22*self.size,  2*self.size,  6*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x + 18*self.size,  self.my_y + 14*self.size,  2*self.size, 10*self.size])
+      pygame.draw.rect(self.screen, self.secondary_color, [self.my_x + 18*self.size,  self.my_y + 24*self.size,  2*self.size,  6*self.size])
+      pygame.draw.rect(self.screen, self.tertiary_color,  [self.my_x + 20*self.size,  self.my_y + 16*self.size,  2*self.size,  2*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x + 20*self.size,  self.my_y + 18*self.size,  2*self.size,  8*self.size])
+      pygame.draw.rect(self.screen, self.secondary_color, [self.my_x + 20*self.size,  self.my_y + 26*self.size,  2*self.size,  4*self.size])
+      pygame.draw.rect(self.screen, self.secondary_color, [self.my_x + 22*self.size,  self.my_y + 10*self.size,  2*self.size,  4*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x + 22*self.size,  self.my_y + 14*self.size,  2*self.size,  4*self.size])
+      pygame.draw.rect(self.screen, self.tertiary_color,  [self.my_x + 22*self.size,  self.my_y + 18*self.size,  2*self.size,  2*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x + 22*self.size,  self.my_y + 20*self.size,  2*self.size,  6*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x + 24*self.size,  self.my_y + 22*self.size,  2*self.size,  6*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x + 26*self.size,  self.my_y + 24*self.size,  2*self.size,  6*self.size])
+      pygame.draw.rect(self.screen, self.secondary_color, [self.my_x + 28*self.size,  self.my_y + 14*self.size,  2*self.size,  4*self.size])
+      pygame.draw.rect(self.screen, self.primary_color,   [self.my_x + 28*self.size,  self.my_y + 18*self.size,  2*self.size, 14*self.size])
+
+  def move (self):
+    if (self.my_x +self.my_velocity_x +30*self.size > self.screen.get_width()):
+      self.my_velocity_x = -1 * self.my_velocity_x
+    elif (self.my_x +self.my_velocity_x < 0):
+      self.my_velocity_x = -1 * self.my_velocity_x
+    self.my_x += self.my_velocity_x
+    if (self.my_y +self.my_velocity_y +30*self.size > self.screen.get_height()):
+      self.my_velocity_y = -1 * self.my_velocity_y
+    elif (self.my_y +self.my_velocity_y < 0):
+      self.my_velocity_y = -1 * self.my_velocity_y
+    self.my_y += self.my_velocity_y
+
