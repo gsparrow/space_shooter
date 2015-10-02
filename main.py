@@ -26,6 +26,7 @@ clock = pygame.time.Clock()
 
 baddie  = sprites.space_invader_squid(  0, 0, 0, 0, 4, RED, screen)
 baddie2 = sprites.space_invader_crab ( 80, 0, 0, 0, 4, RED, screen)
+baddie3 = sprites.space_invader_jellyfish (180, 0, 0, 0, 4, RED, screen)
 while not done:
 
   #limit the clock to ten loops per second
@@ -41,6 +42,8 @@ while not done:
   baddie.move()
   baddie2.draw()
   baddie2.move()
+  baddie3.draw()
+  baddie3.move()
 
   pygame.display.flip()
 
